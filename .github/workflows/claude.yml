@@ -45,26 +45,24 @@ jobs:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           show_full_output: true
           claude_args: '--allowedTools Bash(gh:*) Bash(git:*)'
-          custom_instructions: |
-            **AFTER IMPLEMENTING ANY ISSUE:**
-            Use Bash to EXECUTE the following command — do NOT just suggest or show it:
+          prompt: |
+            The user asked: ${{ github.event.comment.body }}
+
+            Issue title: ${{ github.event.issue.title }}
+            Issue body: ${{ github.event.issue.body }}
+
+            Please implement the requested changes based on the issue above.
+
+            When done, use Bash to EXECUTE this command to create a PR — do NOT just suggest it:
             gh pr create --title "<descriptive title>" --body "## Summary
             <summary of what was implemented>
 
             Closes #${{ github.event.issue.number }}"
 
-            Always include "Closes #${{ github.event.issue.number }}" in the PR body.
-
             **COMMIT RULES:**
             - Do NOT add "Co-authored-by" lines to commits
             - Do NOT add "Generated with Claude Code" or similar attributions
             - Keep commits clean and professional
-
-            **WHEN WORKING ON PR FEEDBACK:**
-            Make the requested changes and commit. The PR will automatically update - do NOT create a new PR.
-
-            **WHEN FIXING CI FAILURES:**
-            Fix the issues, commit the fix. The CI will automatically re-run.
 
             **COMMIT MESSAGE FORMAT (max 72 chars):**
             - Imperative mood: "Add" not "Added"
