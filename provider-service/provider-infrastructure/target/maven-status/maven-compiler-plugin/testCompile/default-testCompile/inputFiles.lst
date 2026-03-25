@@ -1,0 +1,8 @@
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/test/java/com/paymentgateway/provider/SuperTest.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/test/java/com/paymentgateway/provider/kafka/KafkaOutboxEventPublisherTest.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/test/java/com/paymentgateway/provider/kafka/PaymentAuthorizationKafkaConsumerTest.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/test/java/com/paymentgateway/provider/persistence/OutboxAuthorizationResultAdapterTest.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/test/java/com/paymentgateway/provider/persistence/ProviderTransactionPersistenceAdapterTest.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/test/java/com/paymentgateway/provider/router/ProviderRouterTest.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/test/java/com/paymentgateway/provider/service/PaymentAuthorizationServiceTest.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/test/java/com/paymentgateway/provider/stripe/StripeGatewayAdapterTest.java

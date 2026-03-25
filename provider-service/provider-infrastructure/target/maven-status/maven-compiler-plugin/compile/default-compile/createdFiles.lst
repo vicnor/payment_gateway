@@ -1,0 +1,15 @@
+com/paymentgateway/provider/persistence/ProviderTransactionRepository.class
+com/paymentgateway/provider/persistence/ProcessedEventRepository.class
+com/paymentgateway/provider/persistence/OutboxEventRelayScheduler.class
+com/paymentgateway/provider/ProviderServiceApplication.class
+com/paymentgateway/provider/stripe/StripeGatewayAdapter.class
+com/paymentgateway/provider/persistence/ProcessedEventEntity.class
+com/paymentgateway/provider/persistence/OutboxAuthorizationResultAdapter.class
+com/paymentgateway/provider/kafka/PaymentAuthorizationKafkaConsumer.class
+com/paymentgateway/provider/persistence/OutboxEventRepository.class
+com/paymentgateway/provider/persistence/ProviderTransactionEntity.class
+com/paymentgateway/provider/kafka/KafkaOutboxEventPublisher.class
+com/paymentgateway/provider/persistence/OutboxEventRelayTransactions.class
+com/paymentgateway/provider/persistence/ProviderTransactionPersistenceAdapter.class
+com/paymentgateway/provider/persistence/ProcessedEventPersistenceAdapter.class
+com/paymentgateway/provider/persistence/OutboxEventEntity.class

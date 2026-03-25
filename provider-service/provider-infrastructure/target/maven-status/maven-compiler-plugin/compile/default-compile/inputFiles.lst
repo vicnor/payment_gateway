@@ -1,0 +1,15 @@
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/ProviderServiceApplication.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/kafka/KafkaOutboxEventPublisher.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/kafka/PaymentAuthorizationKafkaConsumer.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/persistence/OutboxAuthorizationResultAdapter.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/persistence/OutboxEventEntity.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/persistence/OutboxEventRelayScheduler.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/persistence/OutboxEventRelayTransactions.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/persistence/OutboxEventRepository.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/persistence/ProcessedEventEntity.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/persistence/ProcessedEventPersistenceAdapter.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/persistence/ProcessedEventRepository.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/persistence/ProviderTransactionEntity.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/persistence/ProviderTransactionPersistenceAdapter.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/persistence/ProviderTransactionRepository.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-infrastructure/src/main/java/com/paymentgateway/provider/stripe/StripeGatewayAdapter.java

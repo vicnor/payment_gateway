@@ -1,0 +1,13 @@
+com/paymentgateway/provider/port/in/HandlePaymentAuthorizationUseCase.class
+com/paymentgateway/provider/port/out/SaveProviderTransactionPort.class
+com/paymentgateway/provider/port/out/SaveAuthorizationOutboxEventPort.class
+com/paymentgateway/provider/port/out/ProviderGatewayPort.class
+com/paymentgateway/provider/domain/ProviderAuthorizationFailed.class
+com/paymentgateway/provider/domain/ProviderAuthorizationSucceeded.class
+com/paymentgateway/provider/domain/PaymentAuthorizationEvent.class
+com/paymentgateway/provider/domain/AuthorizationCode.class
+com/paymentgateway/provider/domain/ProviderActionRequired.class
+com/paymentgateway/provider/port/out/EventIdempotencyPort.class
+com/paymentgateway/provider/domain/ProviderTransaction.class
+com/paymentgateway/provider/domain/AuthorizationResult.class
+com/paymentgateway/provider/domain/AuthorizationStatus.class

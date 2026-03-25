@@ -1,0 +1,10 @@
+com/paymentgateway/provider/stripe/StripeGatewayAdapterTest.class
+com/paymentgateway/provider/router/ProviderRouterTest.class
+com/paymentgateway/provider/persistence/ProviderTransactionPersistenceAdapterTest.class
+com/paymentgateway/provider/kafka/KafkaOutboxEventPublisherTest$TestResultConsumer.class
+com/paymentgateway/provider/kafka/PaymentAuthorizationKafkaConsumerTest.class
+com/paymentgateway/provider/persistence/OutboxAuthorizationResultAdapterTest.class
+com/paymentgateway/provider/service/PaymentAuthorizationServiceTest$1.class
+com/paymentgateway/provider/service/PaymentAuthorizationServiceTest.class
+com/paymentgateway/provider/SuperTest.class
+com/paymentgateway/provider/kafka/KafkaOutboxEventPublisherTest.class

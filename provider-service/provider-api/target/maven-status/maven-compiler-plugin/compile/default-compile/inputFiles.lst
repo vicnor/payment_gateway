@@ -1,0 +1,13 @@
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-api/src/main/java/com/paymentgateway/provider/domain/AuthorizationCode.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-api/src/main/java/com/paymentgateway/provider/domain/AuthorizationResult.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-api/src/main/java/com/paymentgateway/provider/domain/AuthorizationStatus.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-api/src/main/java/com/paymentgateway/provider/domain/PaymentAuthorizationEvent.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-api/src/main/java/com/paymentgateway/provider/domain/ProviderActionRequired.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-api/src/main/java/com/paymentgateway/provider/domain/ProviderAuthorizationFailed.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-api/src/main/java/com/paymentgateway/provider/domain/ProviderAuthorizationSucceeded.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-api/src/main/java/com/paymentgateway/provider/domain/ProviderTransaction.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-api/src/main/java/com/paymentgateway/provider/port/in/HandlePaymentAuthorizationUseCase.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-api/src/main/java/com/paymentgateway/provider/port/out/EventIdempotencyPort.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-api/src/main/java/com/paymentgateway/provider/port/out/ProviderGatewayPort.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-api/src/main/java/com/paymentgateway/provider/port/out/SaveAuthorizationOutboxEventPort.java
+/Users/victornordstrand/Code/payment_gateway/provider-service/provider-api/src/main/java/com/paymentgateway/provider/port/out/SaveProviderTransactionPort.java
