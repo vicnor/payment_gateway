@@ -26,7 +26,7 @@ public class PaymentController {
 
     @PostMapping
     public ResponseEntity<PaymentResponse> createPayment(
-            @RequestHeader(value = "Idempotency-Key", required = true) String idempotencyKey,
+            @RequestHeader(value = "Idempotency-Key") String idempotencyKey,
             @Valid @RequestBody CreatePaymentRequest request) {
         try {
             UUID.fromString(idempotencyKey);
