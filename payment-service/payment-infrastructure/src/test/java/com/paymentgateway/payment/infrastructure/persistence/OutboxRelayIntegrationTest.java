@@ -36,7 +36,7 @@ class OutboxRelayIntegrationTest extends SuperTest {
         var command = new CreatePaymentCommand(
                 "merchant-1", "order-1", 1000, "SEK",
                 CaptureMode.IMMEDIATE, "CARD", "tok_visa", "stripe",
-                java.util.UUID.randomUUID().toString());
+                java.util.UUID.randomUUID().toString(), null);
         createPaymentUseCase.createPayment(command);
 
         // event exists and is unclaimed/unpublished
