@@ -18,7 +18,7 @@ jobs:
       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')) ||
       (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')))
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 30
     permissions:
       contents: write
       pull-requests: write
@@ -37,17 +37,15 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           show_full_output: true
-          additional_permissions: |
-            actions: read
-          prompt: |
-            **IMPORTANT - WHEN WORKING ON ISSUES:**
-            After you finish implementing the code changes and committing them, create a pull request:
+          custom_instructions: |
+            **AFTER IMPLEMENTING ANY ISSUE:**
+            Always create a pull request when done with code changes:
+            gh pr create --title "<descriptive title>" --body "## Summary
+            <summary of what was implemented>
 
-            gh pr create --title "Your descriptive title" --body "## Summary
-            Your summary of what was implemented.
             Closes #${{ github.event.issue.number }}"
 
-            Always include a summary of changes AND "Closes #${{ github.event.issue.number }}" in the body.
+            Always include "Closes #${{ github.event.issue.number }}" in the PR body.
 
             **COMMIT RULES:**
             - Do NOT add "Co-authored-by" lines to commits
@@ -60,8 +58,7 @@ jobs:
             **WHEN FIXING CI FAILURES:**
             Fix the issues, commit the fix. The CI will automatically re-run.
 
-            **OUTPUT RULES:**
-            ## Commit Message Requirements (max 72 chars)
+            **COMMIT MESSAGE FORMAT (max 72 chars):**
             - Imperative mood: "Add" not "Added"
             - Action verbs: Add, Update, Fix, Remove, Refactor, Implement
             - No articles (a, an, the)
