@@ -31,15 +31,23 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Authenticate GitHub CLI
+        run: gh auth status
+        env:
+          GH_TOKEN: ${{ github.token }}
+
       - name: Run Claude Code
         id: claude
         uses: anthropics/claude-code-action@v1
+        env:
+          GH_TOKEN: ${{ github.token }}
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           show_full_output: true
+          claude_args: '--allowedTools Bash(gh:*) Bash(git:*)'
           custom_instructions: |
             **AFTER IMPLEMENTING ANY ISSUE:**
-            Always create a pull request when done with code changes:
+            Use Bash to EXECUTE the following command — do NOT just suggest or show it:
             gh pr create --title "<descriptive title>" --body "## Summary
             <summary of what was implemented>
 
