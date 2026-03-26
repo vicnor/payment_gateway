@@ -8,14 +8,13 @@ CREATE TABLE webhook_outbox (
     payload           TEXT NOT NULL,
     status            VARCHAR(20) NOT NULL DEFAULT 'PENDING',
     attempt_count     INTEGER NOT NULL DEFAULT 0,
-    next_retry_at     TIMESTAMPTZ NOT NULL,
-    last_attempted_at TIMESTAMPTZ,
-    created_at        TIMESTAMPTZ NOT NULL
+    next_retry_at     TIMESTAMP WITH TIME ZONE NOT NULL,
+    last_attempted_at TIMESTAMP WITH TIME ZONE,
+    created_at        TIMESTAMP WITH TIME ZONE NOT NULL
 );
 
 CREATE INDEX idx_webhook_outbox_pending_retry
-    ON webhook_outbox (next_retry_at)
-    WHERE status = 'PENDING';
+    ON webhook_outbox (next_retry_at);
 
 CREATE INDEX idx_webhook_outbox_aggregate
     ON webhook_outbox (aggregate_type, aggregate_id);

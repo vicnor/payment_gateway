@@ -14,6 +14,7 @@ import com.paymentgateway.payment.api.port.out.LoadPaymentPort;
 import com.paymentgateway.payment.api.port.out.SaveOutboxEventPort;
 import com.paymentgateway.payment.api.port.out.SavePaymentAttemptPort;
 import com.paymentgateway.payment.api.port.out.SavePaymentPort;
+import com.paymentgateway.payment.api.port.out.SaveWebhookDeliveryPort;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -42,6 +43,7 @@ class PaymentServiceAuthorizationTest {
     @Mock SaveOutboxEventPort saveOutboxEventPort;
     @Mock EventIdempotencyPort eventIdempotencyPort;
     @Mock CreatePaymentIdempotencyPort createPaymentIdempotencyPort;
+    @Mock SaveWebhookDeliveryPort saveWebhookDeliveryPort;
 
     PaymentService service;
 
@@ -54,16 +56,17 @@ class PaymentServiceAuthorizationTest {
     @BeforeEach
     void setUp() {
         service = new PaymentService(savePaymentPort, loadPaymentPort, savePaymentAttemptPort,
-                loadPaymentAttemptPort, saveOutboxEventPort, eventIdempotencyPort, createPaymentIdempotencyPort);
+                loadPaymentAttemptPort, saveOutboxEventPort, eventIdempotencyPort, createPaymentIdempotencyPort,
+                saveWebhookDeliveryPort);
 
         paymentId = UUID.randomUUID();
         attemptId = UUID.randomUUID();
         eventId = UUID.randomUUID().toString();
 
-        payment = new Payment(paymentId, "merchant-1", "order-1",
-                com.paymentgateway.payment.api.domain.Money.of(10000, "SEK"),
+        payment = new Payment(paymentId, "merchant-1", "order-1", 10000,
+                java.util.Currency.getInstance("SEK"),
                 com.paymentgateway.payment.api.domain.CaptureMode.IMMEDIATE,
-                "CARD", "card-ref-1", "stripe",
+                "CARD", "card-ref-1", "stripe", null,
                 PaymentStatus.PROCESSING, java.time.Instant.now(), java.time.Instant.now());
 
         attempt = new PaymentAttempt(attemptId, paymentId, "stripe",
